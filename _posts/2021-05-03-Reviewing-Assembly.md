@@ -9,7 +9,7 @@ Jason Turner is one of my favorite YouTubers. He always goes to a tool called [C
 
 I had this as my c++ code: 
 
-```
+```cpp
 int foo()
 {
     return 10;
@@ -27,7 +27,7 @@ int main()
 
 and this was the generated assembly:
 
-```
+```nasm
 1  foo():
 2          push    rbp
 3          mov     rbp, rsp
