@@ -1,9 +1,9 @@
---------
+---
 layout: post
 title: Reviewing Assembly
 published: true
 tags: c++ x86_x64 assembly
---------
+---
 
 Jason Turner is one of my favorite YouTubers. He always goes to a tool called [Compiler Explorer](https://godbolt.org/) to illustrate features of c++. Having been motivated to know more assembly, I decided to refresh my memory with some basics. 
 
