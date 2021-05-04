@@ -8,15 +8,15 @@ This is a place where I put together little summaries of things I learned throug
 {% endfor %}
 <h1>Recent Posts</h1>
 {% for post in site.posts offset:1 limit:2 %}
-  <h1>{{ post.title }}</h1>
+  <h2>{{ post.title }}</h2>
   <div>{{ post.content }}</div>
 {% endfor %}
 
 # Older Posts
 <ul>
-  {% for post in site.posts %}
+  {% for post in site.posts offset:3 %}
     <li>
-      <a href="/TIL/{{ post.url }}">{{ post.title }}</a>
+      <a href="/TIL{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
