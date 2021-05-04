@@ -1,5 +1,5 @@
 # Today I Learned
-This is a place where I put together little summaries of things I learned through the day.
+Here, I document some of the programming topics that I have spent time thinking about and working on.
 
 #  Latest Post
 {% for post in site.posts limit:1 %}
