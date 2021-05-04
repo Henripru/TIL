@@ -28,24 +28,24 @@ int main()
 and this was the generated assembly:
 
 ```nasm
-1  foo():
-2          push    rbp
-3          mov     rbp, rsp
-4          mov     eax, 10
-5          pop     rbp
-6          ret
-7  main:
-8          push    rbp
-9          mov     rbp, rsp
-10         sub     rsp, 16
-11         mov     DWORD PTR [rbp-16], 0
-12         lea     rax, [rbp-16]
-13         mov     QWORD PTR [rbp-8], rax
-14         call    foo()
-15         mov     DWORD PTR [rbp-12], eax
-16         mov     eax, 0
-17         leave
-18         ret
+ foo():
+         push    rbp
+         mov     rbp, rsp
+         mov     eax, 10
+         pop     rbp
+         ret
+ main:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     DWORD PTR [rbp-16], 0
+        lea     rax, [rbp-16]
+        mov     QWORD PTR [rbp-8], rax
+        call    foo()
+        mov     DWORD PTR [rbp-12], eax
+        mov     eax, 0
+        leave
+        ret
 ```
 
 Stepping through, I found the code somewhat familiar.
