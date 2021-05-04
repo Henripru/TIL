@@ -1,7 +1,7 @@
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.path }}">{{ post.title }}</a>
+      <a href="{{ /:year/:month/:day/:title }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
