@@ -5,7 +5,11 @@ published: true
 tags: c++ x86_x64 assembly
 ---
 
-Jason Turner is one of my favorite YouTubers. He always goes to a tool called [Compiler Explorer](https://godbolt.org/) to illustrate features of c++. Having been motivated to know more assembly, I decided to refresh my memory with some basics. 
+### Intro
+C++ Weekly With Jason Turner is one of my favorite YouTube channels. Jason always goes to a tool called [Compiler Explorer](https://godbolt.org/) to illustrate features of c++. Having been motivated to better follow his explanations, I decided to refresh my memory by carefully walking through some code. 
+
+### Discussion
+I pulled up compiler explorer and started working.
 
 I had this as my c++ code: 
 
@@ -58,7 +62,9 @@ Starting from the `main:` label:
   - I didn't know how `lea` was working. `lea` is short for Load Effective Address. It stores an address in a register. The expression `[rbp - 16]` was confusing me though. Normally brackets indicate dereferencing an address to copy a value. But with a little searching I found out that [lea has special behavior](https://stackoverflow.com/a/25824111)
 - Line 14 jumps to the foo procedure
 - Lines 1-6 enters, loads 10 into `eax` and leaves
-- Finally, Lines 15-18 set the last z variable and leave main procedure.
+- Finally, Lines 15-18 sets the last `z` variable and leaves main procedure.
+
+### Final Thoughts
 
 When I was going through this assembly, I didn't remember how a stack was organized. The analogy I have in my head now is a stack is organized like the floors in a building. Addresses and floors go from the highest number at the top to the lowest number at the bottom. The way stack frames are allocated is the same way as code is executed. From top to bottom.
 
